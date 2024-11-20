@@ -1,4 +1,4 @@
-API:
+API:</br>
 ==Products==
 - GET: /api/products - get products list
 - POST: /api/products - create product
