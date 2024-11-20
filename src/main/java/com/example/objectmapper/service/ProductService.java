@@ -4,14 +4,17 @@ import com.example.objectmapper.model.Product;
 import com.example.objectmapper.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import java.util.*;
 
-import java.util.List;
-import java.util.Optional;
 
 @Service
 public class ProductService {
-    @Autowired
+
     private ProductRepository pr;
+
+    public ProductService(ProductRepository pr) {
+        this.pr = pr;
+    }
 
     public List<Product> getAllProducts() {
         return pr.findAll();

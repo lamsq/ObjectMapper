@@ -8,8 +8,12 @@ import java.util.*;
 
 @Service
 public class CustomerService {
-    @Autowired
+
     private CustomerRepository cr;
+
+    public CustomerService(CustomerRepository cr) {
+        this.cr = cr;
+    }
 
     public List<Customer> getAllCustomers() {
         return cr.findAll();

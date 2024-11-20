@@ -14,8 +14,12 @@ import java.util.Optional;
 
 @Service
 public class OrderService {
-    @Autowired
+
     private OrderRepository or;
+
+    public OrderService(OrderRepository or) {
+        this.or = or;
+    }
 
     @Autowired
     private ProductRepository pr;
